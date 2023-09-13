@@ -1,5 +1,4 @@
 export const Deposite = (amount)=>{
-    console.log(amount,'amount')
     return (dispatch)=>{
         dispatch({
             type: 'deposite',
@@ -12,6 +11,15 @@ export const Withdrawl = (amount)=>{
     return (dispatch)=>{
         dispatch({
             type: 'withdrawl',
+            payload: amount
+        })
+    }
+
+}
+export const Clear = (amount)=>{
+    return (dispatch)=>{
+        dispatch({
+            type: 'clear',
             payload: amount
         })
     }
